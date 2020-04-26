@@ -2,7 +2,26 @@
 #include <string.h>
 
 int main() {
-	system("egrep '^#([a-fA-F0-9]{6}|[a-fA-F0-9]{8})' colours.txt | cut -c 4,5");
+	FILE *green;
+	green = fopen("green.txt", "r");
+	char line[84];
+
+	if(fgets(line, 84, green)){
+		puts(line);
+	}
+	char* token = strtok(line, ",");
+	
+	while(token != NULL){
+		printf("%d,", token);
+		token = strtok(NULL, ",");
+	}
+
+	/*while(fscanf(green, "%x", line))
+	{ 
+		printf("%d, ", line);
+	}*/
+	
+	fclose(green);
 	
 	/*int num;
 	scanf("%x", &num);
