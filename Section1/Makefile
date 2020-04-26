@@ -1,8 +1,8 @@
-#Task 1 - "The quick brown fox jumps over the lazy dog" word count
-run-task-1: 
+#Task 1
+run-task-1:
 	printf 'The quick brown fox jumps over the lazy dog\n' | wc -w
 
-#Task 2 - "The quick brown fox jumps over the lazy dog
+#Task 2
 run-task-2:
 	printf 'The quick brown fox jumps over the lazy dog\n' | tr "[a-z]" "[A-Z]"
 

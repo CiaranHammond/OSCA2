@@ -12,5 +12,8 @@ run-task-3:
 
 #Task 4
 run-task-4:
-	cat access.log | grep MSIE > access.ie.log
+	grep MSIE access.log > access.ie.log
 
+#Task 5
+run-task-5:
+	egrep '[5-9] "|1[0-9] "' access.log | cut -d ' ' -f 3,4,5 | sort | uniq -c
